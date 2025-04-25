@@ -1,0 +1,49 @@
+.title-page {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     
+    justify-content: space-between;
+    height: 200px;
+    margin: auto !important;
+    width: 100% !important;
+}
+.web-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.logo {
+    width: 150px;
+    animation: spin 6s linear infinite;
+}
+.country-logic {
+    padding: 20px !important;
+    margin: 100px auto !important;
+    margin-bottom: 0px !important;
+    display: flex;
+    justify-content: space-between;
+
+}
+.title-page > h5 {
+    text-align: center;
+    margin: 30px !important;
+    font-style: italic;
+}
+.home-title-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+.water-link {
+    color: #4b88e3;
+}
+.resource-link {
+    color: #FCD34D;
+}
+.population-link {
+    color: #34D399;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
