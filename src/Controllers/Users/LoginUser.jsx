@@ -1,7 +1,12 @@
 import PackageJSON from '../../../package.json'
 
 async function LoginUser(email, password, setError) {
-    const url = PackageJSON.API.BaseURL + PackageJSON.API.Login;
+    var url = '';
+    if(PackageJSON.API.DebugMode)
+        url = PackageJSON.API.BaseURLDebug + PackageJSON.API.Login;
+    else 
+        url = PackageJSON.API.BaseURLProd + PackageJSON.API.Login;
+    
     const model = {
         email: email,
         password: password

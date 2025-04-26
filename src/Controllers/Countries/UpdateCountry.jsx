@@ -1,7 +1,12 @@
 import PackageJSON from '../../../package.json';
 
 async function UpdateCountry(country, SetError) {
-    const url = PackageJSON.API.BaseURL + PackageJSON.API.UpdateCountry;
+    var url = '';
+    if(PackageJSON.API.DebugMode)
+        url = PackageJSON.API.BaseURLDebug + PackageJSON.API.UpdateCountry;
+    else 
+        url = PackageJSON.API.BaseURLProd + PackageJSON.API.UpdateCountry;
+
     const jsonData = JSON.stringify(country);
 
     try {

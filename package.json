@@ -44,7 +44,9 @@
     ]
   },
   "API": {
-    "BaseURL": "https://navigate-geography-api.onrender.com/",
+    "BaseURLProd": "https://navigate-geography-api.onrender.com/",
+    "BaseURLDebug": "http://127.0.0.1:5000/",
+    "DebugMode": false,
     "GetCountriesFilter": "countries/get",
     "UpdateCountry":"countries/update",
     "Login": "login",

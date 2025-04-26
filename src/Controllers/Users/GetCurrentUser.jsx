@@ -1,7 +1,11 @@
 import PackageJSON from '../../../package.json'
 
 async function GetCurrentUser(setError) {
-    const url = PackageJSON.API.BaseURL + PackageJSON.API.currentUser;
+    var url = '';
+    if(PackageJSON.API.DebugMode)
+        url = PackageJSON.API.BaseURLDebug + PackageJSON.API.currentUser;
+    else 
+        url = PackageJSON.API.BaseURLProd + PackageJSON.API.currentUser;
 
     const response = await fetch(url,  {
         method: "GET",

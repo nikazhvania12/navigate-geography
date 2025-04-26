@@ -13,7 +13,12 @@ async function GetCountriesFilter(SetError, name, waterSupplyFrom, resourcesFrom
     }
 
     const json = JSON.stringify(model);
-    const url = PackageJSON.API.BaseURL + PackageJSON.API.GetCountriesFilter;
+
+    var url = '';
+    if(PackageJSON.API.DebugMode)
+        url = PackageJSON.API.BaseURLDebug + PackageJSON.API.GetCountriesFilter;
+    else 
+        url = PackageJSON.API.BaseURLProd + PackageJSON.API.GetCountriesFilter;
 
     try {
         const response = await fetch(url, {
